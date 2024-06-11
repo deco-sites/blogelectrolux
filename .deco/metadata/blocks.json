@@ -143,5 +143,9 @@
   "/.deco/blocks/Preview%20site%2Fsections%2FHero.tsx.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Hero.tsx"
+  },
+  "/.deco/blocks/redirects--172092.json": {
+    "blockType": "loaders",
+    "__resolveType": "website/loaders/redirect.ts"
   }
 }

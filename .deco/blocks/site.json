@@ -7,10 +7,12 @@
     {
       "__resolveType": "site/loaders/proxy.ts",
       "pathsToProxy": [
-        "/",
         "/*"
       ],
       "urlToProxy": "https://projeta.electrolux.com.br/"
+    },
+    {
+      "__resolveType": "website/loaders/redirects.ts"
     }
   ],
   "seo": {
