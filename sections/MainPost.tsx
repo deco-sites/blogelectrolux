@@ -30,16 +30,16 @@ const DEFAULT_IMAGE =
 
 export default function MainPost({
   post = {
-      slug: "/",
-      title: "Title of blogpost #1",
-      authors: [{ name: "Name of the author", email: "author@deco.cx" }],
-      excerpt:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
-      image: DEFAULT_IMAGE,
-      date: "01 Apr 2024",
-      categories: [{ name: "Tag#1", slug: "tag-1" }],
-      content: "Blog Post Content"
-    },
+    slug: "/",
+    title: "Title of blogpost #1",
+    authors: [{ name: "Name of the author", email: "author@deco.cx" }],
+    excerpt:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+    image: DEFAULT_IMAGE,
+    date: "01 Apr 2024",
+    categories: [{ name: "Tag#1", slug: "tag-1" }],
+    content: "Blog Post Content",
+  },
 }: Props) {
   return (
     <div class="container lg:mx-auto lg:py-14 mx-2 py-12 text-sm">
@@ -73,15 +73,16 @@ export default function MainPost({
               ))}
             </div>
             <div class="flex flex-wrap gap-2">
-                  <span>{post.date
-                    ? new Date(post.date).toLocaleDateString("en-US", {
-                      month: "long",
-                      day: "numeric",
-                      year: "numeric",
-                    })
-                    : ""}
-                    </span>
-                    <span>•</span>
+              <span>
+                {post.date
+                  ? new Date(post.date).toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })
+                  : ""}
+              </span>
+              <span>•</span>
               <span>{post.authors[0]?.name}</span>
             </div>
           </div>

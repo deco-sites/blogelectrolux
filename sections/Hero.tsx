@@ -9,7 +9,7 @@ export interface CTA {
 }
 
 export interface Props {
-  /** 
+  /**
    * @format rich-text
    * @default Click here to tweak this text however you want.
    */

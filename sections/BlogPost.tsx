@@ -1,4 +1,4 @@
-import { BlogPostPage, BlogPost } from "apps/blog/types.ts";
+import { BlogPost, BlogPostPage } from "apps/blog/types.ts";
 import Image from "apps/website/components/Image.tsx";
 
 interface Props {
@@ -17,9 +17,11 @@ const IMAGE_STYLES = "[&_img]:rounded-2xl [&_img]:w-full [&_img]:my-12";
 const BLOCKQUOTE_STYLES =
   "[&>blockquote]:my-6 [&>blockquote]:border-l-2 [&>blockquote]:border-black [&>blockquote]:text-xl [&>blockquote]:italic [&>blockquote]:pl-6";
 
-const CONTENT_STYLES = `max-w-3xl mx-auto ${PARAGRAPH_STYLES} ${HEADING_STYLES} ${CODE_BLOCK_STYLES} ${IMAGE_STYLES} ${BLOCKQUOTE_STYLES}`;
+const CONTENT_STYLES =
+  `max-w-3xl mx-auto ${PARAGRAPH_STYLES} ${HEADING_STYLES} ${CODE_BLOCK_STYLES} ${IMAGE_STYLES} ${BLOCKQUOTE_STYLES}`;
 
-const DEFAULT_AVATAR = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e"
+const DEFAULT_AVATAR =
+  "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e";
 
 const DEFAULT_PROPS: BlogPost = {
   title: "Blog title heading will go here",
@@ -149,7 +151,8 @@ export default function BlogPost({ page }: Props) {
         dangerouslySetInnerHTML={{
           __html: content,
         }}
-      ></div>
+      >
+      </div>
       <div class="flex flex-col gap-10 max-w-3xl w-full mx-auto">
         <div class="space-y-4">
           <p class="text-lg font-bold">Share this post</p>
@@ -183,7 +186,9 @@ export default function BlogPost({ page }: Props) {
               {authors[0].name}
             </p>
             <p className="text-base">
-              {`${authors[0].jobTitle ?? "Job Title"}, ${authors[0].company || "Company"}`}
+              {`${authors[0].jobTitle ?? "Job Title"}, ${
+                authors[0].company || "Company"
+              }`}
             </p>
           </div>
         </div>

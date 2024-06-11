@@ -41,13 +41,13 @@ const buildProxyRoutes = (
     );
 
     const [_include, routes] = [[decoSiteMapUrl], [{
-        pathTemplate: decoSiteMapUrl,
-        handler: {
-          value: {
-            __resolveType: "website/handlers/sitemap.ts",
-          },
+      pathTemplate: decoSiteMapUrl,
+      handler: {
+        value: {
+          __resolveType: "website/handlers/sitemap.ts",
         },
-      }]]
+      },
+    }]];
 
     return [
       ...routes,

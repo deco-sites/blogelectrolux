@@ -1,6 +1,3 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
-import Image from "apps/website/components/Image.tsx";
-
 export interface CTA {
   id?: string;
   href: string;
@@ -20,9 +17,6 @@ export interface Props {
   cta?: CTA;
   questions?: Question[];
 }
-
-const DEFAULT_IMAGE =
-  "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/682eb374-def2-4e85-a45d-b3a7ff8a31a9";
 
 export default function BlogPosts({
   title = "FAQs",
