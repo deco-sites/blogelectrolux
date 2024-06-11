@@ -16,7 +16,6 @@ const buildProxyRoutes = (
   try {
     const hostname = publicUrl.hostname;
 
-    // Rejects TLD mystore.com, keep this if Shopify doesn't support
     if (!hostname || hostname.split(".").length <= 2) {
       throw new Error(`Invalid hostname from '${publicUrl}'`);
     }
@@ -70,7 +69,7 @@ export interface Props {
 }
 
 /**
- * @title Shopify Proxy Routes
+ * @title Proxy Routes
  */
 function loader(
   {
